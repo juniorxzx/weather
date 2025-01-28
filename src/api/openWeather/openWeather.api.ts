@@ -8,8 +8,7 @@ export const getWeatherOneCall = async (
   lang: string = "pt_br"
 ) => {
   try {
-    console.log(process.env.API_KEY);
-    const response = await api.get("/onecall", {
+    const response = await api.get("/data/3.0/onecall", {
       params: {
         lat,
         lon,
