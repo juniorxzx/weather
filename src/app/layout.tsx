@@ -1,3 +1,4 @@
+import Header from "@/components/Header/header";
 import Providers from "@/lib/provider";
 import type { Metadata } from "next";
 import localFont from "next/font/local";
@@ -24,9 +25,13 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
+    <html lang="pt-BR">
       <body className={`${geistSans.variable} ${geistMono.variable}`}>
-        <Providers>{children}</Providers>
+        <Providers>
+          <Header />
+
+          {children}
+        </Providers>
       </body>
     </html>
   );

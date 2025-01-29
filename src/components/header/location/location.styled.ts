@@ -1,4 +1,4 @@
-import { PxToRem } from "@/utils/pxToRem";
+import { PxToRem } from "@/utils/helpers/pxToRem";
 import Image from "next/image";
 import styled from "styled-components";
 

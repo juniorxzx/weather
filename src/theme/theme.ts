@@ -1,6 +1,6 @@
 export const darkTheme = {
   colors: {
-    primary: "#333",
+    primary: "#d8e2dc",
     secondary: "#555",
 
     background: "#001219",
@@ -8,13 +8,12 @@ export const darkTheme = {
     text: "#edede9",
   },
   boxShadow: {
-    default: "0px 4px 4px rgba(0, 0, 0, 0.25)",
+    default: "0px 2px 2px rgba(115, 115, 115, 0.5)",
   },
-  
 };
 export const lightTheme = {
   colors: {
-    primary: "#007bff",
+    primary: "#31572c",
     secondary: "#6c757d",
 
     background: "#ffffff",
@@ -22,6 +21,6 @@ export const lightTheme = {
     text: "#212529",
   },
   boxShadow: {
-    default: "0px 4px 4px rgba(0, 0, 0, 0.1)",
+    default: "0px 4px 4px rgba(0, 0, 0, 0.55)",
   },
 };
