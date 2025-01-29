@@ -1,5 +1,5 @@
-import { PxToRem } from "@/utils/pxToRem";
-import Image from "next/image";
+import { PxToRem } from "@/utils/helpers/pxToRem";
+
 import styled from "styled-components";
 
 export const Container = styled.header`
@@ -9,4 +9,10 @@ export const Container = styled.header`
   height: ${PxToRem(60)};
   padding: 0 ${PxToRem(20)};
   justify-content: space-between;
+`;
+
+export const Menu = styled.div`
+  display: flex;
+  align-items: center;
+  gap: ${PxToRem(20)};
 `;
