@@ -8,7 +8,7 @@ import {
   PropsWithChildren,
   useContext,
 } from "react";
-import { parseCookies, setCookie } from "nookies";
+import { destroyCookie, parseCookies, setCookie } from "nookies";
 
 type Theme = "dark" | "light";
 
@@ -25,10 +25,9 @@ const ThemeProvider = ({ children }: PropsWithChildren) => {
   const [theme, setTheme] = useState<Theme>("dark");
 
   useEffect(() => {
-    // Recupera os cookies do lado do cliente
     const cookies = parseCookies();
     const storedTheme = cookies.theme as Theme;
-
+    console.log(storedTheme);
     if (storedTheme) {
       setTheme(storedTheme);
       document.documentElement.classList.add(storedTheme);
@@ -40,15 +39,12 @@ const ThemeProvider = ({ children }: PropsWithChildren) => {
   const toggleTheme = () => {
     const newTheme = theme === "dark" ? "light" : "dark";
     setTheme(newTheme);
+    destroyCookie(null, "theme");
 
-    // Define o cookie com a nova preferência de tema
     setCookie(null, "theme", newTheme, {
-      maxAge: 365 * 24 * 60 * 60, // 1 ano em segundos
+      maxAge: 365 * 24 * 60 * 60,
       path: "/",
     });
-
-    document.documentElement.classList.remove(theme);
-    document.documentElement.classList.add(newTheme);
   };
 
   return (
