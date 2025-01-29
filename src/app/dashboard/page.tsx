@@ -4,10 +4,10 @@ import { getGeoLocation } from "@/api/getGeoLocation/getGeoLocation.api";
 import { getWeatherOneCall } from "@/api/openWeather/openWeather.api";
 import { useEffect, useState } from "react";
 import { Container } from "./home.styled";
-import Header from "@/components/header/header";
+import WeatherForecast from "@/components/WeatherForecast/weatherForecast";
 
 export default function Home() {
-  const [weather, setWeather] = useState<any>(null);
+  const [weather, setWeather] = useState<WeatherData>();
   useEffect(() => {
     const fetchWeather = async () => {
       try {
@@ -20,11 +20,8 @@ export default function Home() {
           "pt_br"
         );
         setWeather(data);
-        console.log(data);
       } catch (err: any) {
         console.log(err.message);
-      } finally {
-        console.log("Finalizado");
       }
     };
 
@@ -32,8 +29,7 @@ export default function Home() {
   }, []);
   return (
     <Container>
-      <Header />
-      <h1>Home</h1>
+      {weather ? <WeatherForecast data={weather} /> : <p>Carregando...</p>}
     </Container>
   );
 }
