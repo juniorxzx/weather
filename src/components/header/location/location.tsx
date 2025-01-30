@@ -1,9 +1,9 @@
 "use client";
 
 import React, { useEffect, useState } from "react";
-import { Location, LocationImg, LocationText } from "./location.styled";
+import { Location, LocationIcon, LocationText } from "./location.styled";
 import { getGeoLocation } from "@/api/getGeoLocation/getGeoLocation.api";
-import LocationIcon from "@/assets/icons/location-icon.png";
+
 const LocationCity = () => {
   const [loading, setLoading] = useState<boolean>(true);
   const [city, setCity] = useState<string>("");
@@ -28,7 +28,7 @@ const LocationCity = () => {
   }
   return (
     <Location>
-      <LocationImg src={LocationIcon} alt="" />
+      <LocationIcon />
       <LocationText>{city}</LocationText>
     </Location>
   );

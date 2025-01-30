@@ -8,8 +8,13 @@ export const formatDays = (timestamp: number): string => {
     data.getFullYear() === today.getFullYear();
   const h = data.getHours().toString().padStart(2, "0");
   const min = data.getMinutes().toString().padStart(2, "0");
+
+  const day = data.getDate().toString().padStart(2, "0");
+  const month = (data.getMonth() + 1).toString().padStart(2, "0");
+  const year = data.getFullYear().toString().padStart(2, "0");
+
   if (now) {
-    return `Hoje - ${h}:${min}`;
+    return `Hoje - ${h}:${min} - ${day}/${month}/${year}`;
   }
   const days = [
     "Domingo",
@@ -23,8 +28,5 @@ export const formatDays = (timestamp: number): string => {
 
   const nameDay = days[data.getDay()];
 
-  const day = data.getDate().toString().padStart(2, "0");
-  const month = (data.getMonth() + 1).toString().padStart(2, "0");
-
-  return `${nameDay}, ${day}/${month}`;
+  return `${nameDay} - ${day}/${month} - ${day}/${month}/${year}`;
 };

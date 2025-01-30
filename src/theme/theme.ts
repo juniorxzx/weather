@@ -24,3 +24,6 @@ export const lightTheme = {
     default: "0px 4px 4px rgba(0, 0, 0, 0.55)",
   },
 };
+
+
+export type ThemeType = typeof lightTheme;

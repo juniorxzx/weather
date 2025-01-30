@@ -3,8 +3,9 @@
 import { getGeoLocation } from "@/api/getGeoLocation/getGeoLocation.api";
 import { getWeatherOneCall } from "@/api/openWeather/openWeather.api";
 import { useEffect, useState } from "react";
-import { Container } from "./home.styled";
+import { Container, ForecastContainer } from "./dashboard.styled";
 import WeatherForecast from "@/components/WeatherForecast/weatherForecast";
+import WeatherToday from "@/components/WeatherToday/WeatherToday";
 
 export default function Home() {
   const [weather, setWeather] = useState<WeatherData>();
@@ -29,7 +30,14 @@ export default function Home() {
   }, []);
   return (
     <Container>
-      {weather ? <WeatherForecast data={weather} /> : <p>Carregando...</p>}
+      <ForecastContainer>
+        {weather ? (
+          <WeatherToday data={weather.current} />
+        ) : (
+          <p>Carregando...</p>
+        )}
+        {weather ? <WeatherForecast data={weather} /> : <p>Carregando...</p>}
+      </ForecastContainer>
     </Container>
   );
 }

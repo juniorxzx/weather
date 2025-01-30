@@ -15,4 +15,8 @@ export const Menu = styled.div`
   display: flex;
   align-items: center;
   gap: ${PxToRem(20)};
+
+  @media (max-width: 768px) {
+    display: none;
+  }
 `;
