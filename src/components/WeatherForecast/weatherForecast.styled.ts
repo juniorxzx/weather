@@ -1,4 +1,5 @@
 import { PxToRem } from "@/utils/helpers/pxToRem";
+import { motion } from "framer-motion";
 import styled from "styled-components";
 
 export const Container = styled.div`
@@ -6,6 +7,10 @@ export const Container = styled.div`
   align-items: center;
   flex-direction: column;
   gap: ${PxToRem(16)};
+
+  @media (max-width: 768px) {
+    justify-content: center;
+  }
 `;
 
 export const ContainerTitle = styled.h1`
@@ -14,9 +19,20 @@ export const ContainerTitle = styled.h1`
   color: ${({ theme }) => theme.colors.text};
   text-align: left;
   width: 100%;
+  @media (max-width: 768px) {
+    justify-content: center;
+  }
+`;
+export const Carousel = styled(motion.div)`
+  display: flex;
+  width: 100%;
+  cursor: grab;
+  overflow: hidden;
 `;
 
-export const ForecastContainer = styled.div`
+export const ForecastContainer = styled(motion.div)`
+  width: 100%;
   display: flex;
+
   gap: ${PxToRem(16)};
 `;

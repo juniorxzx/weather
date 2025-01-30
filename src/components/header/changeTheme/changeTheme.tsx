@@ -6,10 +6,15 @@ import {
   SunIcon,
   ThemeContainer,
 } from "./changeTheme.styled";
-import { useThemeContext } from "@/store/globalContext";
+
+import { darkTheme } from "@/theme/theme";
+import { ThemeContext } from "@/store/globalContext";
 
 const ChangeTheme = () => {
-  const { theme, toggleTheme } = useThemeContext();
+  const themeContext = useContext(ThemeContext);
+  if (!themeContext) return null;
+
+  const { theme, toggleTheme } = themeContext;
   return (
     <ThemeContainer onClick={toggleTheme}>
       {theme === "dark" ? (

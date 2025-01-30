@@ -12,11 +12,6 @@ const nextConfig = {
       },
     ];
   },
-  compilerOptions: {
-    paths: {
-      "@Assets/*": ["src/Assets/*"],
-    },
-  },
 };
 
 export default nextConfig;
