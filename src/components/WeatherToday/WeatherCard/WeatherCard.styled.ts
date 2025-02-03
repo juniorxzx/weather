@@ -9,7 +9,6 @@ export const Container = styled.div<{ $weather: string }>`
   width: 100%;
   height: 100%;
   background-color: ${({ theme }) => theme.colors.primary};
-
   color: ${({ theme }) => theme.colors.text};
   box-shadow: ${({ theme }) => theme.boxShadow.default};
   border-radius: ${PxToRem(12)};
@@ -35,7 +34,7 @@ export const HeaderTitle = styled.div`
   display: flex;
   gap: ${PxToRem(8)};
   align-items: center;
-
+  color: ${({ theme }) => theme.colors.text};
   & > p {
     font-size: ${PxToRem(24)};
     font-weight: 600;
@@ -53,6 +52,7 @@ export const HeaderTime = styled.div`
   flex-direction: column;
   justify-content: space-between;
   align-items: flex-end;
+  
 `;
 
 export const ContainerBody = styled.div`
