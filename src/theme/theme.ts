@@ -1,16 +1,19 @@
-const primaryColor = "hsl(180, 70%, 40%)";
-const secondaryColor = "hsl(180, 50%, 30%)";
-
+const primaryColor = "#a2d2ff";
+const secondaryColor = "#c0fdff";
 export const darkTheme = {
   colors: {
     primary: primaryColor,
     secondary: secondaryColor,
-    background: "hsl(220, 40%, 8%)",
-    muted: "hsl(220, 20%, 18%)",
-    text: "hsl(210, 30%, 92%)",
+    background: "hsl(210, 25%, 10%)",
+    surface: "hsl(215, 20%, 18%)",
+    muted: "#a7bed3",
+    text: "#FFF",
+    highlight: "hsl(30, 90%, 55%)",
+    gradient: `linear-gradient(135deg, ${primaryColor}, ${secondaryColor})`,
   },
-  boxShadow: {
-    default: "0px 4px 8px rgba(0, 0, 0, 0.5)",
+  shadow: {
+    default: "0px 4px 8px rgba(0, 0, 0, 0.3)",
+    inner: "inset 0px 2px 4px rgba(0, 0, 0, 0.2)",
   },
 };
 
@@ -19,11 +22,15 @@ export const lightTheme = {
     primary: primaryColor,
     secondary: secondaryColor,
     background: "hsl(0, 0%, 98%)",
-    muted: "hsl(220, 15%, 85%)",
-    text: "hsl(220, 15%, 15%)",
+    surface: "hsl(0, 0%, 100%)",
+    muted: "hsl(210, 10%, 60%)",
+    text: "hsl(210, 30%, 20%)",
+    highlight: "hsl(30, 90%, 55%)",
+    gradient: `linear-gradient(135deg, ${primaryColor}, ${secondaryColor})`,
   },
-  boxShadow: {
-    default: "0px 4px 6px rgba(0, 0, 0, 0.1)",
+  shadow: {
+    default: "0px 2px 4px rgba(0, 0, 0, 0.1)",
+    inner: "inset 0px 1px 2px rgba(0, 0, 0, 0.05)",
   },
 };
 

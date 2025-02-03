@@ -12,7 +12,7 @@ const Header = () => {
       <LocationCity />
 
       <Menu>
-        <Search />
+        {/* <Search /> */}
         <ChangeTheme />
       </Menu>
     </Container>
