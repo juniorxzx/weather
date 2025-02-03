@@ -27,9 +27,9 @@ export const BoxMode = styled(motion.div)`
 `;
 
 export const MoonIcon = styled(LuMoon)`
-  color: ${({ theme }) => theme.colors.secondary};
+  color: ${({ theme }) => theme.colors.text};
 `;
 
 export const SunIcon = styled(MdOutlineWbSunny)`
-  color: ${({ theme }) => theme.colors.secondary};
+  color: ${({ theme }) => theme.colors.text};
 `;
