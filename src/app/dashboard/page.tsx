@@ -4,11 +4,12 @@ import { getGeoLocation } from "@/api/getGeoLocation/getGeoLocation.api";
 import { getWeatherOneCall } from "@/api/openWeather/openWeather.api";
 import { useEffect, useState } from "react";
 import { Container, ForecastContainer } from "./dashboard.styled";
-import WeatherForecast from "@/components/WeatherForecast/weatherForecast";
-import WeatherToday from "@/components/WeatherToday/WeatherToday";
+import WeatherForecast from "@/components/WeatherForecast";
+import WeatherToday from "@/components/WeatherToday";
 
 export default function Home() {
   const [weather, setWeather] = useState<WeatherData>();
+  
   useEffect(() => {
     const fetchWeather = async () => {
       try {

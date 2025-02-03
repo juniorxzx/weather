@@ -10,11 +10,11 @@ export const Container = styled(motion.div)<{ $weather: string }>`
   gap: 16px;
   background-color: ${({ theme }) => theme.colors.surface};
   color: ${({ theme }) => theme.colors.highlight};
-  padding: 20px;
+  padding: ${PxToRem(20)};
   border-radius: 12px;
-  width: 100%;
-  height: ${PxToRem(300)};
-  max-width: ${PxToRem(200)};
+  width: 300px;
+  height: 300px;
+  min-width: 300px;
   box-shadow: ${({ theme }) => theme.shadow.default};
   user-select: none;
   cursor: pointer;

@@ -40,7 +40,7 @@ const WeatherCard = ({ data }: WeatherCardProps) => {
         <CardHeaderHour>{formatDays(data.dt).split("-")[1]}</CardHeaderHour>
       </CardHeader>
       <CardBody>
-        <CardBodyTitle>{data.temp.day}°</CardBodyTitle>
+        <CardBodyTitle>{Math.round(data.temp.day)}°</CardBodyTitle>
         <CardBodyAdditional>
           <h3>{data.weather[0].description}</h3>
           <p>Sensação térmica: {data.feels_like.day}°</p>

@@ -6,7 +6,7 @@ import {
   Container,
   ContainerTitle,
   ForecastContainer,
-} from "./weatherForecast.styled";
+} from "./styles";
 import WeatherCard from "./WeatherCard/weatherCard";
 
 interface WeatherForecastProps {

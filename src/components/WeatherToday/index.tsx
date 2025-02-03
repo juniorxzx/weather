@@ -1,5 +1,5 @@
 import React from "react";
-import { Container } from "./WeatherToday.styled";
+import { Container } from "./styles";
 import WeatherCard from "./WeatherCard/WeatherCard";
 
 interface WeatherTodayProps {
