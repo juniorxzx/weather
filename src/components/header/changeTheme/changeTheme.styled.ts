@@ -10,7 +10,7 @@ export const ThemeContainer = styled.div`
   background-color: ${({ theme }) => theme.colors.muted};
   user-select: none;
   cursor: pointer;
-  box-shadow: ${({ theme }) => theme.boxShadow.default};
+  box-shadow: ${({ theme }) => theme.shadow.default};
   align-items: center;
   display: flex;
   justify-content: space-between;

@@ -8,14 +8,14 @@ export const Container = styled(motion.div)<{ $weather: string }>`
   flex-direction: column;
   align-items: center;
   gap: 16px;
-  background-color: #1e1e1e;
-  color: #ffffff;
+  background-color: ${({ theme }) => theme.colors.surface};
+  color: ${({ theme }) => theme.colors.highlight};
   padding: 20px;
   border-radius: 12px;
   width: 100%;
   height: ${PxToRem(300)};
   max-width: ${PxToRem(200)};
-  box-shadow: ${({ theme }) => theme.boxShadow.default};
+  box-shadow: ${({ theme }) => theme.shadow.default};
   user-select: none;
   cursor: pointer;
 

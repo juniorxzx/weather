@@ -9,11 +9,11 @@ export const Container = styled.div<{ $weather: string }>`
   width: 100%;
   height: 100%;
   background-color: ${({ theme }) => theme.colors.primary};
-  color: ${({ theme }) => theme.colors.text};
-  box-shadow: ${({ theme }) => theme.boxShadow.default};
+  color: ${({ theme }) => theme.colors.highlight};
+  box-shadow: ${({ theme }) => theme.shadow.default};
   border-radius: ${PxToRem(12)};
   padding: ${PxToRem(16)};
-  box-shadow: ${({ theme }) => theme.boxShadow.default};
+
   user-select: none;
   cursor: pointer;
 
@@ -34,7 +34,7 @@ export const HeaderTitle = styled.div`
   display: flex;
   gap: ${PxToRem(8)};
   align-items: center;
-  color: ${({ theme }) => theme.colors.text};
+  color: ${({ theme }) => theme.colors.highlight};
   & > p {
     font-size: ${PxToRem(24)};
     font-weight: 600;
@@ -42,7 +42,7 @@ export const HeaderTitle = styled.div`
 `;
 
 export const HeaderIcon = styled(TiWeatherPartlySunny)`
-  color: ${({ theme }) => theme.colors.text};
+  color: ${({ theme }) => theme.colors.highlight};
   height: ${PxToRem(24)};
   width: ${PxToRem(24)};
 `;
@@ -52,7 +52,6 @@ export const HeaderTime = styled.div`
   flex-direction: column;
   justify-content: space-between;
   align-items: flex-end;
-  
 `;
 
 export const ContainerBody = styled.div`
@@ -81,7 +80,8 @@ export const CardDetails = styled.div`
   gap: ${PxToRem(8)};
   width: ${PxToRem(200)};
   height: ${PxToRem(100)};
-  background-color: ${({ theme }) => theme.colors.secondary};
+  background: ${({ theme }) => theme.colors.gradient};
+  box-shadow: ${({ theme }) => theme.shadow.inner};
   border-radius: ${PxToRem(8)};
   padding: ${PxToRem(8)};
   justify-content: center;
