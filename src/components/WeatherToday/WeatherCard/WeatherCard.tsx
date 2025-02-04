@@ -50,7 +50,7 @@ const WeatherCard = ({ data }: WeatherCardProps) => {
       </ContainerHeader>
 
       <ContainerBody>
-        <Temperature>{data.temp}°C</Temperature>
+        <Temperature>{Math.round(data.temp)}°C</Temperature>
         <p>{data.weather[0].description}</p>
 
         <CardsDetails>

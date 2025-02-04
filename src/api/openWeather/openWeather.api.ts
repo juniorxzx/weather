@@ -13,7 +13,7 @@ export const getWeatherOneCall = async (
         lat,
         lon,
         exclude,
-        appid: "648df346cf000f8c40b6499e5eff284e",
+
         units,
         lang,
       },
@@ -27,7 +27,6 @@ export const getWeatherOneCall = async (
     throw new Error("Não foi possível buscar os dados de clima.");
   }
 };
-
 
 export const getWeatherByCity = async (city: string) => {
   try {

@@ -35,7 +35,6 @@ const getCityFromCoordinates = async (
       params: {
         lat,
         lon,
-        appid: "648df346cf000f8c40b6499e5eff284e",
         lang: "pt_br",
       },
     });

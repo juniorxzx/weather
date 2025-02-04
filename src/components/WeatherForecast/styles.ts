@@ -19,6 +19,7 @@ export const ContainerTitle = styled.h1`
   color: ${({ theme }) => theme.colors.text};
   text-align: left;
   width: 100%;
+  
   @media (max-width: 768px) {
     justify-content: center;
   }
