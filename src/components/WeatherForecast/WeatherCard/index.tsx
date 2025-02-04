@@ -8,7 +8,7 @@ import {
   CardHeaderTitle,
   Container,
   ContainerImage,
-} from "./weathercard.styled";
+} from "./styles";
 import { formatDays } from "@/utils/helpers/days";
 
 import Clouds from "@/assets/weather/Clouds.jpg";

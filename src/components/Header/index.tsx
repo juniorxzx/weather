@@ -1,10 +1,11 @@
 "use client";
 
 import React, { useEffect, useState } from "react";
-import { Container, Menu } from "./header.styled";
-import LocationCity from "./Location/location";
-import ChangeTheme from "./ChangeTheme/changeTheme";
-import Search from "./Search/search";
+
+import LocationCity from "./Location";
+import ChangeTheme from "./ChangeTheme";
+import Search from "./Search";
+import { Container, Menu } from "./styles";
 
 const Header = () => {
   return (

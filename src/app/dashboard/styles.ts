@@ -13,3 +13,10 @@ export const ForecastContainer = styled.div`
 
   flex-direction: column;
 `;
+
+export const LoadingContainer = styled.div`
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  align-items: center;
+`;

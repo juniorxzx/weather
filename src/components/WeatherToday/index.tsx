@@ -1,6 +1,6 @@
 import React from "react";
 import { Container } from "./styles";
-import WeatherCard from "./WeatherCard/WeatherCard";
+import WeatherCard from "./WeatherCard";
 
 interface WeatherTodayProps {
   data: CurrentWeather;
