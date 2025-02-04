@@ -9,7 +9,7 @@ import {
   HeaderTime,
   HeaderTitle,
   Temperature,
-} from "./WeatherCard.styled";
+} from "./styles";
 import { formatDays } from "@/utils/helpers/days";
 
 import Clouds from "@/assets/weather/Clouds.jpg";

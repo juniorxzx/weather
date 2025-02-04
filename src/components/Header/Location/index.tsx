@@ -1,8 +1,10 @@
 "use client";
 
 import React, { useEffect, useState } from "react";
-import { Location, LocationIcon, LocationText } from "./location.styled";
+import { Location, LocationIcon, LocationText } from "./styles";
 import { getGeoLocation } from "@/api/getGeoLocation/getGeoLocation.api";
+import Skeleton from "react-loading-skeleton";
+import "react-loading-skeleton/dist/skeleton.css";
 
 const LocationCity = () => {
   const [loading, setLoading] = useState<boolean>(true);
@@ -24,7 +26,7 @@ const LocationCity = () => {
   }, []);
 
   if (loading) {
-    return <LocationText>Carregando...</LocationText>;
+    return <Skeleton count={1}  height={20} width={100} />;
   }
   return (
     <Location>

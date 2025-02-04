@@ -5,7 +5,7 @@ import {
   MoonIcon,
   SunIcon,
   ThemeContainer,
-} from "./changeTheme.styled";
+} from "./styles";
 
 import { darkTheme } from "@/theme/theme";
 import { ThemeContext } from "@/store/globalContext";

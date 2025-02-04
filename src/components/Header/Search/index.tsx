@@ -1,7 +1,7 @@
 "use client";
 
 import React from "react";
-import { IconSearch, Input, SearchContainer } from "./search.styled";
+import { IconSearch, Input, SearchContainer } from "./styles";
 
 const Search = () => {
   return (

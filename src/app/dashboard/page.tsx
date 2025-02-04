@@ -3,13 +3,16 @@
 import { getGeoLocation } from "@/api/getGeoLocation/getGeoLocation.api";
 import { getWeatherOneCall } from "@/api/openWeather/openWeather.api";
 import { useEffect, useState } from "react";
-import { Container, ForecastContainer } from "./dashboard.styled";
+import { Container, ForecastContainer, LoadingContainer } from "./styles";
 import WeatherForecast from "@/components/WeatherForecast";
 import WeatherToday from "@/components/WeatherToday";
+import Skeleton from "react-loading-skeleton";
+import "react-loading-skeleton/dist/skeleton.css";
+import LoadingSkeleon from "@/components/WeatherForecast/LoadingSkeleton";
 
 export default function Home() {
   const [weather, setWeather] = useState<WeatherData>();
-  
+
   useEffect(() => {
     const fetchWeather = async () => {
       try {
@@ -35,9 +38,17 @@ export default function Home() {
         {weather ? (
           <WeatherToday data={weather.current} />
         ) : (
-          <p>Carregando...</p>
+          <LoadingContainer>
+            <Skeleton count={1} height={300} width={300} />
+          </LoadingContainer>
         )}
-        {weather ? <WeatherForecast data={weather} /> : <p>Carregando...</p>}
+        {weather ? (
+          <WeatherForecast data={weather} />
+        ) : (
+          <LoadingContainer>
+            <LoadingSkeleon />
+          </LoadingContainer>
+        )}
       </ForecastContainer>
     </Container>
   );

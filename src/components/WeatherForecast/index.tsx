@@ -7,7 +7,7 @@ import {
   ContainerTitle,
   ForecastContainer,
 } from "./styles";
-import WeatherCard from "./WeatherCard/weatherCard";
+import WeatherCard from "./WeatherCard";
 
 interface WeatherForecastProps {
   data: WeatherData;
